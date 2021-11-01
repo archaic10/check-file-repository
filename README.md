@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: archaic10/neutrino@v1
+        uses: archaic10/check-file-repository@v1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           path_file: 'apps.js'
