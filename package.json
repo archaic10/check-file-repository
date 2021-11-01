@@ -1,0 +1,18 @@
+{
+  "name": "check-file-repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vitor França <vitor.franca.9400@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "@octokit/action": "^3.18.0",
+    "axios": "^0.24.0"
+  }
+}
