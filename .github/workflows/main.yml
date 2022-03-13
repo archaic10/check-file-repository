@@ -1,0 +1,31 @@
+name: New Changelog
+on: 
+  push:
+
+jobs:
+  changelog:    
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: changelog
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 
+      - name: dependencys
+        run: yarn install
+        
+      - name: update version
+        run: |
+          git config --global user.email "vitor.franca.9400@gmail.com"
+          git config --global user.name "Vitor França"
+          npm version major
+        
+      - name: install auto-changelog
+        run: yarn add auto-changelog --dev     
+        
+      - name: generate changelog
+        run: yarn auto-changelog -p              
+             
+      - uses: archaic10/new-changelog@main   
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
