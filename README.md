@@ -2,7 +2,7 @@
 ### This action performs a scan of a file within the repository
 
 ## Example
-```
+```yml
 jobs:
   verify_file:
     runs-on: ubuntu-latest
